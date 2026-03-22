@@ -1,29 +1,9 @@
 <template>
   <div id="app">
-    <!-- Top Navbar -->
-    <nav class="top-navbar" id="top-navbar">
-      <div class="nav-links">
-        <a href="#" id="nav-service-dashboard">Service Dashboard</a>
-        <a href="#" id="nav-finance-forecast">Finance Forecast</a>
-        <a href="#" class="active" id="nav-human-resources">Human Resources</a>
-        <a href="#" id="nav-users">Users</a>
-        <a href="#" id="nav-compliances">Compliances &amp; Verification</a>
-      </div>
-      <div class="navbar-right">
-        <i class="bi bi-bell navbar-icon" id="navbar-notifications"></i>
-        <i class="bi bi-chat-dots navbar-icon" id="navbar-messages"></i>
-        <div class="user-profile" id="navbar-user-profile">
-          <div class="user-avatar">MS</div>
-          <div class="user-info">
-            <div class="user-name">Max Smith</div>
-            <div class="user-location">London, UK</div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
     <!-- Main Layout -->
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
 
     <!-- Mobile Sidebar Toggle -->
     <button class="sidebar-toggle" @click="toggleSidebar" id="sidebar-toggle-btn">
