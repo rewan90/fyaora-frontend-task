@@ -233,5 +233,6 @@ const clearFilters = () => {
 const closeSidebar = () => {
   document.querySelector('.sidebar')?.classList.remove('open')
   document.querySelector('.sidebar-overlay')?.classList.remove('open')
+  document.querySelector('.sidebar-wrapper')?.classList.remove('open')
 }
 </script>

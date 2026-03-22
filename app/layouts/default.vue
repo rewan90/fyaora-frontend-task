@@ -62,8 +62,10 @@ const toggleTopNav = () => {
 const toggleSidebar = () => {
   const sidebar = document.querySelector('.sidebar')
   const overlay = document.querySelector('.sidebar-overlay')
+  const wrapper = document.querySelector('.sidebar-wrapper')
   sidebar?.classList.toggle('open')
   overlay?.classList.toggle('open')
+  wrapper?.classList.toggle('open')
 }
 
 // Provide toast function globally

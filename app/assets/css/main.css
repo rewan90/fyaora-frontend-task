@@ -1088,6 +1088,10 @@ body {
     display: none;
   }
 
+  .sidebar-wrapper.open {
+    display: block;
+  }
+
   .sidebar-toggle {
     display: flex;
     align-items: center;
