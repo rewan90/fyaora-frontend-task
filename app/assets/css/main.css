@@ -8,7 +8,7 @@
   --secondary-background: #C8D5D9;
   --primary-blue-hover: #2563EB;
   --primary-blue-light: #EFF6FF;
-  --sidebar-bg: #F8F9FA;
+  --sidebar-bg: #F4F7F9;
   --navbar-border: #E5E7EB;
   --table-header-bg: #F9FAFB;
   --table-row-alt: #F9FAFB;
@@ -189,7 +189,7 @@ body {
   margin-bottom: 20px;
 }
 
-.sidebar-section-title {
+.sidebar-main-heading {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;

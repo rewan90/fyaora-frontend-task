@@ -5,9 +5,24 @@
       <img src="~/assets/images/logo.png" alt="gler logo" class="brand-logo-img" />
     </div>
 
-    <!-- User Management Header -->
-    <div class="sidebar-section">
-      <div class="sidebar-section-title">User Management</div>
+    <!-- User Management Section -->
+     
+    <div class="sidebar-section" style="position: relative;">
+      <div
+        class="sidebar-section-title sidebar-main-heading"
+        @click="toggleUserManagementMenu"
+        style="cursor: pointer; display: flex; align-items: center; justify-content: space-between;"
+        id="user-management-toggle"
+      >
+        <span>User Management</span>
+        <i
+          :style="{ transform: isUserManagementMenuOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.3s ease', fontSize: '14px' }"
+        ></i>
+      </div>
+      <UserManagementMenu
+        :isOpen="isUserManagementMenuOpen"
+        @close="isUserManagementMenuOpen = false"
+      />
     </div>
 
     <!-- Postcode -->
@@ -133,6 +148,12 @@ const emit = defineEmits<{
 }>()
 
 const addToast = inject<(message: string, type?: string) => void>('addToast')
+
+const isUserManagementMenuOpen = ref(false)
+
+const toggleUserManagementMenu = () => {
+  isUserManagementMenuOpen.value = !isUserManagementMenuOpen.value
+}
 
 const localFilters = reactive<FilterState>({
   postcode: '',
