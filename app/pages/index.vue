@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <div class="m-5">
+    <div class="sidebar-wrapper">
       <SidebarFilters @apply="applyFilters" @clear="clearFilters" />
     </div>
 
@@ -43,7 +43,7 @@
       </div>
 
       <!-- Data Table -->
-      <div v-else class="table-container">
+      <div v-else class="table-container table-responsive">
         <table class="data-table" id="waitlist-table">
           <thead>
             <tr>

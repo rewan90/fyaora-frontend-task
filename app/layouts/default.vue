@@ -2,6 +2,9 @@
   <div>
     <!-- Top Navbar -->
     <header class="top-navbar">
+      <button class="top-nav-toggle" @click="toggleTopNav" aria-label="Toggle navigation">
+        <i class="bi" :class="isTopNavOpen ? 'bi-x-lg' : 'bi-list'"></i>
+      </button>
       <nav class="nav-links" :class="{ 'open': isTopNavOpen }">
         <a href="#">Service Dashboard</a>
         <a href="#">Finance Forecast</a>
@@ -19,9 +22,6 @@
             <div class="user-location">London, UK</div>
           </div>
         </div>
-        <button class="top-nav-toggle d-md-none" @click="toggleTopNav" aria-label="Toggle navigation">
-          <i class="bi bi-list"></i>
-        </button>
       </div>
     </header>
 
