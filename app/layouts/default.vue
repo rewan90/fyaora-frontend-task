@@ -2,7 +2,7 @@
   <div>
     <!-- Top Navbar -->
     <header class="top-navbar">
-      <nav class="nav-links">
+      <nav class="nav-links" :class="{ 'open': isTopNavOpen }">
         <a href="#">Service Dashboard</a>
         <a href="#">Finance Forecast</a>
         <a href="#" class="active">Human Resources</a>
@@ -19,6 +19,9 @@
             <div class="user-location">London, UK</div>
           </div>
         </div>
+        <button class="top-nav-toggle d-md-none" @click="toggleTopNav" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
       </div>
     </header>
 
@@ -50,6 +53,11 @@
 
 <script setup lang="ts">
 const toasts = useState<Array<{ id: number; message: string; type: string; fading: boolean }>>('toasts', () => [])
+
+const isTopNavOpen = ref(false)
+const toggleTopNav = () => {
+  isTopNavOpen.value = !isTopNavOpen.value
+}
 
 const toggleSidebar = () => {
   const sidebar = document.querySelector('.sidebar')

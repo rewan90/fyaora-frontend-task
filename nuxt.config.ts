@@ -6,8 +6,6 @@ export default defineNuxtConfig({
   serverDir: 'server/',
 
   css: [
-    'bootstrap/dist/css/bootstrap.min.css',
-    'bootstrap-icons/font/bootstrap-icons.css',
     '~/assets/css/main.css'
   ],
 
