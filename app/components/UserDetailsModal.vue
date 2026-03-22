@@ -11,28 +11,29 @@
       <div class="modal-content modal-custom">
         <!-- Header -->
         <div class="modal-header">
-          <div>
-            <div class="modal-title-row">
-              <i class="bi bi-person-circle modal-title-icon"></i>
-              <span class="modal-company-name" id="modal-company-name">User Details</span>
-            </div>
+          <div class="modal-title-row">
+            <i class="bi bi-person-circle modal-title-icon"></i>
+            <span class="modal-title-text" id="modal-company-name">User Details</span>
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <!-- Body -->
         <div class="modal-body" v-if="user">
-          <h5 class="modal-company-name">{{ user.companyName }}</h5>
-          <div class="modal-company-email">
-            <i class="bi bi-envelope"></i> {{ user.email }}
-          </div>
-
-          <!-- Badges -->
-          <div class="modal-badges">
-            <span class="badge-custom">{{ user.customerType }}</span>
-            <span class="badge-custom badge-invited">
-              {{ user.status === 'Onboarded' ? 'onboarded' : user.status === 'Rejected' ? 'rejected' : 'invited' }}
-            </span>
+          <!-- Company Info Row -->
+          <div class="modal-company-row">
+            <div class="modal-company-info">
+              <h5 class="modal-company-name">{{ user.companyName }}</h5>
+              <div class="modal-company-email">
+                <i class="bi bi-envelope"></i> {{ user.email }}
+              </div>
+            </div>
+            <div class="modal-badges">
+              <span class="badge-custom">{{ user.customerType }}</span>
+              <span class="badge-custom badge-invited">
+                {{ user.status === 'Onboarded' ? 'onboarded' : user.status === 'Rejected' ? 'rejected' : 'invited' }}
+              </span>
+            </div>
           </div>
 
           <!-- Contact Information -->
@@ -68,8 +69,8 @@
           </div>
 
           <!-- User Details / Services -->
-          <div class="modal-section">
-            <h6 class="modal-section-title">User Details</h6>
+          <div>
+            <h6 class="modal-section-title mt-3">User Details</h6>
             <div class="modal-services">
               <span
                 v-for="service in user.services"
@@ -82,7 +83,7 @@
           </div>
 
           <!-- Internal Notes -->
-          <div class="internal-notes">
+          <div class="internal-notes modal-section">
             <div class="notes-header">
               <div class="title">
                 <i class="bi bi-chat-left-text"></i>

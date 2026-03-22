@@ -2,8 +2,7 @@
   <aside class="sidebar" id="sidebar-filters">
     <!-- Brand -->
     <div class="sidebar-brand">
-      <div class="brand-logo">gler<span>+</span></div>
-      <div class="brand-subtitle">Admin Panel</div>
+      <img src="~/assets/images/logo.png" alt="gler logo" class="brand-logo-img" />
     </div>
 
     <!-- User Management Header -->
